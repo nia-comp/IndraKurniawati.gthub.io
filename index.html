@@ -1,70 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nemorphism calci</title>
-    <link rel="stylesheet" href="calci.css">
-    <link rel="stylesheet" type="text/css"
-    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="model.js"></script >
-</head> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Calculator</title>
+  <link href="style.css" rel="stylesheet">
+  <script src="script.js" defer></script>
+</head>
 <body>
-    
-        <div class="container">
-            <div class="display">
-                <input id="screen" type="text" placeholder="0">
-            </div>
-
-            <div class="btns">
-                <div class="row">
-                    <button id="ce" onclick="backspc()">CE</button>
-                    <button onclick="fact()">x!</button>
-                    <button class="btn">(</button>
-                    <button class="btn">)</button>
-                    <button class="btn">%</button>
-                    <button id="ac" onclick="screen.value=''">AC</button>
-                </div>
-
-                <div class="row">
-                    <button onclick="sin()">sin</button>
-                    <button onclick="pi()">π</button>
-                    <button class="btn">7</button>
-                    <button class="btn">8</button>
-                    <button class="btn">9</button>
-                    <button class="btn">÷</button>
-                </div>
-
-                <div class="row">
-                    <button onclick="cos()">cos</button>
-                    <button onclick="log()">log</button>
-                    <button class="btn">4</button>
-                    <button class="btn">5</button>
-                    <button class="btn">6</button>
-                    <button class="btn">×</button>
-                </div>
-
-                <div class="row">
-                    <button onclick="tan()">tan</button>
-                    <button onclick="sqrt()">√</button>
-                    <button class="btn">1</button>
-                    <button class="btn">2</button>
-                    <button class="btn">3</button>
-                    <button class="btn">-</button>
-                </div>
-
-                <div class="row">
-                    <button onclick="e()">e</button>
-                    <button onclick="pow()">x <span style="position: relative; bottom: .4em; right: .1em;">y</span> </button>
-                    <button class="btn">0</button>
-                    <button class="btn">.</button>
-                    <button id="eval" onclick="screen.value=eval(screen.value)">=</button>
-                    <button class="btn">+</button>
-                </div>
-            </div>
-        </div>
-     
-    <h2>soft <span>SCIENTIFIC</span><br>CALCI <br> <i style="font-size: 100px;" class="fa fa-reply"></i></h2>
-       
-</body>   
+  <div class="calculator-grid">
+    <div class="output">
+      <div data-previous-operand class="previous-operand"></div>
+      <div data-current-operand class="current-operand"></div>
+    </div>
+    <button data-all-clear class="span-two">AC</button>
+    <button data-delete>DEL</button>
+    <button data-operation>÷</button>
+    <button data-number>1</button>
+    <button data-number>2</button>
+    <button data-number>3</button>
+    <button data-operation>*</button>
+    <button data-number>4</button>
+    <button data-number>5</button>
+    <button data-number>6</button>
+    <button data-operation>+</button>
+    <button data-number>7</button>
+    <button data-number>8</button>
+    <button data-number>9</button>
+    <button data-operation>-</button>
+    <button data-number>.</button>
+    <button data-number>0</button>
+    <button data-equals class="span-two">=</button>
+  </div>
+</body>
 </html>
